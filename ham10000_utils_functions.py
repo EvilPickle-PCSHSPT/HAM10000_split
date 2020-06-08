@@ -94,7 +94,7 @@ def deprocess_image(x):
     x = np.clip(x, 0, 255).astype('uint8')
     return x
 
-def my_decode_predictions(preds, top=5, class_list_path='/content/ham10000-with-one-image-folder/HAM10000_index.json'):
+def my_decode_predictions(preds, top=5, class_list_path='/content/HAM10000_split/HAM10000_index.json'):
   if len(preds.shape) != 2 or preds.shape[1] != 7:
     raise ValueError('`decode_predictions` expects '
                      'a batch of predictions '
